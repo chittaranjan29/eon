@@ -1,0 +1,54 @@
+div{
+    height: 200px;
+    width: 600px;
+    background-image: url('images/flower.jpg');
+ }
+
+ h1{
+   
+    background-color: blueviolet;
+    text-align: center;
+    color: white;
+ }
+
+ h2{
+    color:red;
+ }
+
+ #a1{
+    background-color: black;
+    color: white;
+ }
+
+ #a2{
+    background-color: blue;
+    color: white;
+ }
+
+ #a3{
+    background-color: blueviolet;
+    color: white;
+ }
+
+ .test{
+    font-family: 'Times New Roanm', Times, serif;
+    font-size: 50px;
+    font-style: italic;
+    text-align: center;
+    background-color: cadetblue;
+
+ }
+
+ h1,h2,p
+ {
+   text-transform: uppercase; 
+ }
+
+ #test1
+ {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+    font-style: oblique;
+    font-weight: bold;
+    
+ }

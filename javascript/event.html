@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test()
+        {
+            alert('button is clicked!!');
+        }
+
+        function test1()
+        {
+            alert('cursor on the paragraph');
+        }
+
+        function test2()
+        {
+            alert('drag event performed');
+        }
+
+        function test3()
+        {
+            document.getElementById("para1").innerText="Focus event performed";
+        }
+
+        function test4()
+        {
+            document.getElementById("para1").innerText="Blur event performed";
+        }
+    </script>
+</head>
+<body>
+    
+
+    <input type="submit" value="click here" onclick="test()">
+
+    <p onmouseover="test1()">This is a paragraph</p> 
+
+    <div ondragstart="test2()">
+        This is a div element.
+    </div>
+    Name<input type="text" onfocus="test3()" onblur="test4()">
+    <p id="para1"></p>
+</body>
+</html>

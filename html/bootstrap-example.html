@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+<button class="btn btn-info" type="button" data-bs-toggle="modal" data-bs-target="#a1">click here</button>
+
+<div class="modal" id="a1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2 class="modal-title">Contact Us</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+
+            <div class="modal-body">
+                <form>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  <div class="mb-3">
+                    <button type="button" class="btn btn-primary">Submit</button>
+                    <button type="reset" class="btn btn-danger">Reset</button>
+                  </div>
+                </form>
+            </div>
+
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<button type="button" class="btn btn-primary" data-bs-toggle="popover" title="This is a demo title" data-bs-content="This is a demo content">Popover</button>
+<script>
+
+    var popoverActive=[].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var list=popoverActive.map(function(popoverTriggeredEl)
+    {
+        return new bootstrap.Popover(popoverTriggeredEl)
+    }
+    )
+
+</script>
+
+
+
+
+<button type="button" class="btn btn-primary" data-bs-toggle="tooltip" title="Sample title">Click Here</button>
+<script>
+
+    var tooltipActive=[].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var list=tooltipActive.map(function(tooltipTriggeredEl)
+    {
+        return new bootstrap.Tooltip(tooltipTriggeredEl)
+    }
+    )
+
+</script>
+
+
+<div class="dropdown">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Menu</button>
+
+    <ul class="dropdown-menu">
+        <li><a href="#" class="dropdown-item">Home </a></li>
+        <li><a href="#" class="dropdown-item">About Us </a></li>
+        <li><a href="#" class="dropdown-item">Services </a></li>
+        <li><a href="#" class="dropdown-item">Contact us </a></li>
+    </ul>
+</div>
+
+<div>
+    <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#col1">Collapsible</button>
+
+    <div id="col1" class="collapse">
+        This is a demo content.
+    </div>
+</div>
+
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<<device-width>>, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function processFormData()
+        {
+            var email=document.getElementById("email").value;
+            var password=document.getElementById("password").value;
+
+            console.log(email + " " + password);
+
+            if(email=="admin@gmail.com" && password=="12345")
+            {
+                alert('login successfull!!');
+            }
+            else
+            {
+                alert('email or password is incorrect!!');
+            }
+        }
+
+        function clearFormData()
+        {
+            document.getElementById("email").value="";
+            document.getElementById("password").value="";
+        }
+    </script>
+</head>
+<body>
+    <h2>User Login form</h2>
+    <fieldset>
+       
+        <legend>Login Details</legend>
+        <label>Email</label>
+        <input type="email" name="email" id="email" required>
+         <br><br>
+
+        <label>Password</label>
+        <input type="password" name="password" id="password" required>
+        <br><br>
+
+        <input type="button" onclick="processFormData()" value="login">
+        <input type="button" value="clear" onClick="clearFormData()">
+    
+    </fieldset>
+</body>
+</html>

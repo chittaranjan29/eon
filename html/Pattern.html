@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <form action="/test.html">
+        <label>Password</label>
+        <input type="password" required pattern=".{8,}"><br>
+
+        <label>Password</label>
+        <input type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+
+        <label>Email</label>
+        <input type="text" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+
+        <input type="submit" value="submit">
+    </form>
+
+    <iframe src="test.html" height="500px" width="400px" style="border: 2px solid black;">
+
+    </iframe>
+
+    <iframe src="sample.pdf" height="500px" width="400px" style="border: 2px solid black;">
+
+    </iframe>
+
+    <video height="300px" width="400px" controls>
+        <source src="animation.mp4" type="video/mp4">
+    </video>
+
+    <audio controls>
+        <source src="demo_audio.mp3" type="audio/mp3">
+    </audio>
+   <embed type="image/jpg" src="flower.jpg" height="300px" width="400px">
+   <embed  src="sample.pdf" height="300px" width="400px">
+   <embed  src="animation.mp4" height="300px" width="400px">
+
+</body>
+</html>

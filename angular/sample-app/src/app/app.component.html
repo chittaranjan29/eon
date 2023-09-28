@@ -1,0 +1,10 @@
+<app-header></app-header>
+<div>
+<input type="button" (click)="toggleUserDetails()" value="{{btnText}} User Details">
+</div>
+<div *ngIf="showUserDetails">
+  <app-user-details></app-user-details>
+</div>
+
+
+<app-footer></app-footer>

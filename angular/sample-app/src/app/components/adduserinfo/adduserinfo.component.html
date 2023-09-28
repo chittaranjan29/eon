@@ -1,0 +1,8 @@
+
+<h2>Add new User Information</h2>
+<form #userdata="ngForm" (ngSubmit)="saveData(userdata.value)">
+    Name:<input type="text" name="name" ngModel><br>
+    Job:<input type="text" name="job"  ngModel><br>
+
+    <input type="submit" value="Add New User"/> 
+</form>

@@ -1,0 +1,18 @@
+<form #signup="ngForm"  (ngSubmit)="processFormData(signup)">
+
+    Name: <input type="text" name="userName" ngModel required>
+    <span style="color: red;" *ngIf="signup.controls['userName']?.invalid && signup.controls['userName'].dirty">Name is required</span>
+    <br>
+    Email: <input type="email" name="email" ngModel required>
+    <span style="color: red;" *ngIf="signup.controls['email']?.invalid && signup.controls['email'].dirty">Email is invalid</span>
+    <br>
+    password: <input type="password" name="password" ngModel minlength="8" maxlength="20" required>
+    <span style="color: red;" *ngIf="signup.controls['password']?.invalid && signup.controls['password'].dirty">password is invalid</span>
+
+    <br>
+    Retype password: <input type="password" name="repassword" ngModel minlength="8" maxlength="20" required> 
+    <span style="color: red;" *ngIf="signup.controls['repassword']?.invalid && signup.controls['repassword'].dirty">password is invalid</span>
+    <br>
+    <input type="submit" value="Signup" [disabled]="!signup.valid"/>
+
+</form>

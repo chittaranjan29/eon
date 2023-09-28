@@ -1,0 +1,20 @@
+<p>{{title}}</p>
+<p>{{greet()}}</p>
+<p>{{addition(100,120)}}</p>
+<div style.color="{{color}}">This is a dav element</div>
+
+
+
+<img [src]="pathOfImage" [attr.height]="h" [attr.width]="w">
+<button [disabled]="status">Click</button>
+<p [innerText]="content"></p>
+
+<button (click)="clickFunction()">Click here</button>
+
+
+<button (dblclick)="getContent()">display</button>
+<p>{{text}}</p>
+
+
+<button (click)="clickMe()">Click me</button>
+<p>You have clicked {{clickCount}} times</p>

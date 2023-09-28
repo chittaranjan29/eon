@@ -1,0 +1,157 @@
+Thread Programming / Multithreading:
+
+MutiTasking:
+Doing/Performing more than one task concurrently is called Multitasking.
+
+At Process level: When multiple processes are executed concurrently in the Operating System 
+it is called as Multiprocessing.
+
+At Thread level:When multiple threads are executed simultaneously under the process it is called 
+as Multithreading.
+
+Programming level:
+
+Program1: task1 , task2, task3 etc. - through A process
+task1, task2, task3 - each task is a thread 
+
+Process: A process is an instance of a running program.
+Thread: It is a sub-process or a small part of the main process.
+
+Ways to create a thread:
+i)By extending Thread class.(Thread class implements Runnable interface)
+ii)By implementing Runnable interface.
+
+
+Life cycle of a thread:
+A thread in Java at any point of time exist in any one of the following state.
+A thread lies only in one of the state:
+
+i)New state: When a new there is just created. it is in new state. 
+
+ii)Runnable State: A thread that is ready to run is moved to a Runnable state.
+
+iii)Blocked State: The thread will be in the locked state when it is trying to acquire a lock
+but currently acquired by the other thread.
+
+iv)Waiting state: The thread will be in the waiting state when it calls wait() or join() 
+method. It will move to the runnable state when other thread will notify or that thread will be terminated.
+
+v)Timed waiting state:A thread lies in a timed waiting state when it calls a method with a
+time-out parameter. A thread lies in this state until the timeout is completed or until a 
+notification is received. 
+
+vi)Terminate state : A thread terminates because of the following reasons:
+
+ a)Natural: Because it's exits normally. This happens when the task of the thread is completed entirely.
+ b)Abnormal/Forceful: When some unusual errors or events occurred OS terminates the thread 
+ forcefully or user kills a thread forcefully.
+ 
+
+t1 -> r1(file) - read operation 
+t2 -> r1(file) - write operation
+
+
+i)What is a process?
+ii)What is a thread? What is multithreading?
+iii)What is multiprocessing?
+iv)Why thread is lightweight?
+v)Difference between a thread and a process?
+vi)What is context switching?
+vii)What are the life cycle states of a thread?
+viii)What are the different ways to create a thread?
+
+
+Q:->Write a program to implement two threads running concurrently in the code while the
+first thread will print a multiplication table of 5 and the other thread will print the 
+multiplication table of 10 up to 10 terms.  
+
+Q:->Write a program to implement two threads from one class running concurrently in the code while the
+first thread will print a multiplication table of 5 and the other thread will print the 
+multiplication table of 10 up to 10 terms. 
+
+run()
+{ 
+
+ for(int i=1;i<=10;i++)
+ {
+  sysout(n*i+"="+n*i)
+ }
+}
+
+
+Naming a thread
+setting thread priority
+getting thread priority
+getting thread id
+wait, join method
+
+Priority: It is a value between 1 to 10 associated with every thread. Depending on the value
+the thread scheduler will schedule the thread for execution.
+
+Maximum - 10
+Default - 5
+Minimum - 1
+
+Thread.MAX_PRIORITY
+Thread.MIN_PRIORITY
+Thread.NORM_PRIORITY
+
+
+Thread.curretThread()
+
+Program 1 - task1, task2, task3, task4  
+
+i)less time to execute
+ii)Better utilization of CPU throughput
+
+
+Runnable - abstract run()
+Thread - class
+
+Runnable
+
+Thread 
+class extends Thread class
+
+Thread Scheduler:
+A component of Java decides which thread to be executed by the CPU(processor).
+
+wait() 
+
+Daemon Thread: In Java, daemon threads are low priority threads thats run in the background to
+perform tasks such as garbage collection or provide services to other user thread.
+
+The life of daemon thread depends on the mercy of user threads, meaning that when all user 
+threads finish their execution, JVM will terminate daemon threads automatically.  
+
+
+isDaemon()
+setDaemon(true)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,66 @@
+Typescript: 
+Typescript is nothing but a superset of javascript. 
+It is build on top of javascript and introduces syntax enhancement.
+
+test.ts   --------> typescript compile    ------> test.js
+
+tsc test.ts
+node test.js
+
+Compile on save:
+
+i)tsc --init   //tsconfig.json - typescript compiler checks this file for project configuration and compiler options.
+
+ii)tsc -w  //this is called watch mode. Watches for changes made in the current folder's typescript file. 
+
+
+Control Flow Statements:
+i)For ii)while iii)do-while iv)Switch ii)Jump stathements(break, continue)
+
+Functions:
+Functions are block of code that contains instructions that are to be executed in a sequence whenever called for.
+Same block of code can be reused again and again.
+
+i)Optional parameters: In typescript we can call a function without passing any arguments even though the function specifies parameters.
+
+ii)Default parameter: If the value of an argument is not provided at the time of calling the function then the default value of the parameter will be taken up.
+
+iii)Rest Parameters: A rest parameter allows a function to accept zero or more arguments of the specified type.
+
+
+Constructor:
+i)default: Helps to create empty object. 
+ii)parameterized: Helps to create and initialize new object.
+
+Getters and Setters: It helps us to achieve encapsulation(data+function) by accessing private data members outside of the class using get and set method.
+
+
+String: It is a collection of alphanumeric characters.
+
+
+i)Primitive   var a:string="Hello world";
+ii)Object     var b:String=new String("Hello World");
+
+
+Access Modifiers:
+i)Public : The public modifier allows class properties and method to be accessed from any location.
+ii)private : The private modifier limits the visibility to the same class only.
+iii)Protected: The protected modifier allows properties and methods to be accessible within same class and within subclasses.
+
+
+Inheritance: 
+A class can reuse the properties and methods of another class. This is called inheritance in typescript.
+
+The class that inherits the properties and methods is called child class.(Sub class/derived class)
+
+And the class whose properties and methods are inherited is known as Parent class.(Base/Super)
+
+A  -> B
+
+Method Overiding:In a parent and child relationship if same name methods are available in both the classes that it is called as method overriding.
+
+
+Interface:Typescript interfaces define the contracts with your code.
+It defines the shape of an object i.e. it specifies what properties and methods a given object can have and their corresponding values.
+
+They do not contain any code. An object, function or class that implements the interface must implement all the properties and methods specified in the interface. 

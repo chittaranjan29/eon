@@ -1,0 +1,19 @@
+<form #loginForm="ngForm" (ngSubmit)="processFormData(loginForm)">
+    <label>Email</label>
+    <input type="email" name="email" [(ngModel)]="login.email" #email="ngModel" required email >
+    <div style="color:red;" *ngIf="email?.invalid && (email?.dirty || email?.touched)">
+        Email Invalid!!
+    </div>
+    <br>
+
+
+    <label>Password</label>
+    <input type="password" name="password" [(ngModel)]="login.password" required=" password" #password="ngModel" minlength="8" maxlength="20">
+    <div style="color:red;" *ngIf="!password?.valid && (password?.dirty || password?.touched)">
+        Password Invalid!!
+    </div>
+    <br>
+
+
+    <button type="submit" [disabled]="!loginForm.valid">Login</button>
+</form>

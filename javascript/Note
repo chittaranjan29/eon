@@ -1,0 +1,65 @@
+Console Messages:
+To view intermediate output.
+For Debugging purpose.
+
+Types: i)Normal - Console.log  ii) Warning - console.warn  iii)Error - console.error
+Popup Types: i)alert box ii)prompt box iii)Confirm box
+
+Scope:It defines accessibility of a variable.
+
+Types of scope:
+i)Global ii)Block(local) iii)Function(local)
+
+ES5 - Global and Function
+ES6 - Block scope - let - 2015
+
+let vs. var
+card
+
+Synchronous and Asynchronous:
+
+--->send a requets to a server
+<---get a response
+Synchronous:(Blocking)
+As the name suggests synchronous means to be in sequence, i.e. every segment
+of the code gets executed one by one. So, basically a statement has to wait for the earlier statement to get executed.
+
+
+Asynchronous:(Non-blocking) 
+Aynchronous code allows the program to be executed immediately where the synchronous code will block further execution of the remaining code until
+it finishes the current one. 
+
+Promise:A javascript promise object contains both producing code and
+calls to the consuming code.
+
+let promise=new Promise(function(resolve, reject))
+{
+  //do domething
+});
+
+
+i)The promise constructor takes only one argument which is callback function.
+ii)The callback function takes two arguments resolve and reject.
+iii)Perform operation inside the callback function and if everything went well then call resolve.If desired operation do not go well then call reject. 
+
+
+States:
+i)fulfilled - Action related to promise succeeded
+ii)rejected - Action related to promise failed
+iii)pending - Promise is still pending i.e. not fullfilled or rejected
+iv)settled  - promise has been fullfilled or rejected
+
+Promise consumer:
+Promises can be consumed by registering functions using .then and .catch methods. 
+
+then method:It is invoked when a promise is either resolved or rejected.
+
+Parameters:
+ i)first parameter: The first function is executed if the promise is resolved and result is received.
+
+ ii)second parameter: The second function is executed if the promise is rejected and error object is received.
+
+ == vs. ===
+ 
+
+

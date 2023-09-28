@@ -1,0 +1,25 @@
+<div *ngFor="let user of usersList">
+    <img src="{{user.avatar}}">
+    <p>{{user.id}}</p>
+    <p>{{user.email}}</p>
+    <p>{{user.first_name}} &nbsp; {{user.last_name}}</p>
+</div>
+
+<br><br><br>
+
+<form #data="ngForm" (ngSubmit)="processData(data)">
+    User Id:<input type="number" name="userId" ngModel>
+    <input type="submit" value="Get User Data">
+</form>
+
+<div *ngIf="user.data">
+    <img src="{{user.data.avatar}}"><br>
+    Id:<p>{{user.data.id}}</p>
+    Name<p>{{user.data.first_name}}&nbsp;{{user.data.last_name}}</p>
+    Email<p>{{user.data.email}}</p>
+
+</div>
+
+<br><br><br>
+
+

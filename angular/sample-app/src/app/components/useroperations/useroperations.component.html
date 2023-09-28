@@ -1,0 +1,18 @@
+<form #data="ngForm" (ngSubmit)="processData(data)">
+
+    Existing User Id:<input type="number" name="id" ngModel><br>
+    User name:<input type="text" name="name" ngModel><br>
+    User Job profile:<input type="text" name="job" ngModel><br>
+    <input type="submit" value="Update"/>
+</form>
+
+
+<br><br><br>
+
+<form #data="ngForm" (ngSubmit)="deleteData(data)">
+
+    Existing User Id:<input type="number" name="id" ngModel><br> 
+    <input type="submit" value="Delete"/>
+</form>
+
+

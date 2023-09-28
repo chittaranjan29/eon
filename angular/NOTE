@@ -1,0 +1,422 @@
+Angular framework - written using typescript
+It is one of the most popular frontend framework used to create Single Page Application.(SPA)
+Angular is a component based framework and it allows modularity.
+Component :It is a small part of the user interface.
+
+DOM - Document Object Model - tree like structure
+
+HTML
+head,body
+title, div, p 
+(node,npm,typescript)
+
+npm -g install typescript
+
+npm -g install @angular/cli 
+npm -g install @angular/cli 10.0.3
+ng v
+ng new first-app
+cd first-app
+ng serve   - start the node server and deploy the current angular app
+ng serve --open
+
+npm start
+
+ng - angular
+localhost:4200
+
+Angular: Single Page Application(SPA) - Component based and follows MVC pattern.
+
+Models: Typescript
+Views: Templates(HTML)
+Controller: Typescript
+
+Component - It is the basic building block of angular application. 
+It is a small piece of the UI.
+
+i)A Template(.html) - html code
+ii)A Stylesheet(.css) - style sheet code
+iii)A Typescript file(write component logic)(.ts) - business logic/ component logic
+iv)A Typescript test file(.spec.ts) -  used for testing purpose
+
+App - It is a module. It contains the root component of the application.(app.module.ts)
+
+Node_modules: It contains third party libraries and files. All these files are bundled in our peoject together. 
+
+src - It contains source code of the project.(modules, components, services, decorator, pipes etc )
+App - It is the root module which contains the root component "app".
+Module - A module can conatain components, services, decorator, pipes etc.
+Routing - It's a file which manages routing navigation in the application.
+
+localhost:4200/home - Home component
+localhost:4200/about- About component
+localhost:4200/contact - Contact component
+localhost:4200/signin - Login component
+
+assets: It contains all static resources of the project like images, videos, stylesheets, javascript files etc.
+
+favicon : it's the icon of the application.
+
+index.html: It's the basic html page in which root component gets loaded.
+
+main.ts : It is the starting point of our application. It starts the appModule from
+app.module.ts file.
+
+style.css  - Global css file.
+
+.editorconfig: Editor related configuration like indentation, spacing etc.
+
+.gitIgnore : The files and folders that are needed to skipped while pushing to
+Git repository. 
+
+angular.json: This file defines the structure of our aplication.It includes settings associated with our app.
+
+package-lock.json: Whenever we change something in the node_modules or package.json
+his file gets generated.It is associated with npm.
+
+package.json: It is the npm configuration file. All the dependencies are mentioned in this file.
+We con mention dependency version as per our need.
+
+Readme.md : It is a documentation file.
+
+tsc --init
+tsconfig.json: It is a typescript compiler configuration file.
+
+tsconfig.app.json:This file overrides the tsconfig.json file with relevent app specific configuration. 
+
+
+Create a new component:
+ng generate component component-name
+
+ng g c component-name
+
+pass data: 
+from compenent to template(.ts -> .html)
+ i)Interpolation - {{}}
+template to component
+
+index.html -> loading root compent -> test, login, header
+
+i)Component - without css file
+ii)Component - without template file
+ii)Component - without css and template
+
+ng g c test --inline-style
+ng g c test --inline-template (.css, .ts, spec.ts)
+ng g c test --inline-style --inline-template
+
+
+ng g c component
+
+
+Angular bootstrapping process:
+i)loads index.html
+ii)loads angular and third pary libraries and apps.
+iii)Executes application entry point.(main.ts)
+iv)Load and execute root module(app.module.ts).
+v)Executes the root component.(app.component.ts)
+vi)Displays the template.(app.component.html)
+
+test Module  - new component, services, initial component, 
+
+new module - ng g m test
+
+Routing:
+It is a process of loading components for different paths.
+
+/about - about-us
+/home  - Home
+/contact?id=123&name=raman - Contact-us 
+
+
+/test/56/test1/45 
+
+
+
+
+
+Router - An angular router is a service that enables navigation from one component to another.
+Routes - It is an array of route. 
+Route - It is a part of Routes which contains a path and component name.
+RouterOutlet - It is a dirctive that serves as a placeholder, where the Router should be displayed.
+RouterLink : A Router link is a directive that binds the html element to a Route.
+
+
+pass data through route or routing:
+
+https://www.abc.com/employee?id=123&dept=5 - Query parameter/Request parameter(key-value pair)
+https://www.abc.com/employee/123/1    - URI parameter(Uniform Resource Indicator)
+
+RouterLinkActive
+ActivatedRoute: A service whih keep tracks of the currenty actived route assiciated with the 
+loaded component.
+
+RouterState
+
+app.routing.ts
+
+Route Guard:(Service)
+It helps us to protect routes from unauthorized access.
+User  - about, service, contact, products
+Admin - manageUser, manageComments, managePosts
+
+ i)canActivate: This guard decides if a route can be activated(component can be loaded).
+ ii)canDeactivate
+ iii)canLoad
+ iv)canActivatechild
+ v)Resolve
+
+ ng g guard authentication
+
+ Data binding:
+ Data binding is a technique, where the data stays in sync between the component and the view.
+ whenever user updates the data in view, ANgular updates the component. when the component gets new data , Angular updates the view.  
+
+ Types:
+ i)One way data binding: Data gets updated from component to view or vice versa.
+  a)String interpolation - {{}}
+  b)Property binding     - []   [binding-target]="binding-source"
+  c)Event binding        - ()="test()"
+ 
+ ii)Two way binding [()] (property binding + Event Binding)
+ The data stays in sync between the component and the view.
+ whenever user updates the data in view, ANgular updates the component. when the component gets new data , Angular updates the view.  
+
+ a)NgModel directive to achieve two way data binding. - FormsModule
+
+Event Payload:$event
+DOM events carries the event payload i.e. the information about the event. 
+We can access the event payload by using $event as an argument to the handler function.  
+
+Template Reference Variable:(#variableName)
+
+Angular Directives:
+Directives helps us to manipulate DOM. We can change a DOM element's appearence, behavior, or layout using directives. 
+
+Directives can be classified into three categories beased on how they behave.
+
+i) Structual Directive (ngIf, ngFor, ngTemplate, ngSwitch etc)
+ii) Attribute Directive(ngStyle, ngClass etc)
+iii)Component Directive(in every component)
+
+@ - decorators
+
+Component Communication: Sharing data between components.
+i)Parent to child component(@Input)
+ii)Child to parent component(@Output , Event emitter )
+iii)two different component(separate)
+
+Employee -> RegularEmployee
+Employee -> Deparament
+
+Parent -> counter <app-child [count]=Counter>
+child -> count -> @Input() count:any;
+
+Life cycle hooks methods:
+component ->created, loaded, updated, deleted
+i)ngOnInit
+ii)ngOnChanges
+iii)ngOnDestroy
+
+i)UserDetails - manages user details - button
+ii)Random - Generates random user id
+
+take the name of the user and prefix - a random user id 
+
+US - us3729378432
+
+Service:
+Service is a class that contains reuseable code with some specific purpose.
+A service can be used in many components.It provides service to components.
+
+ng g s service-name
+
+/services
+
+Inject(Dependency Injection - constructor)
+
+component - Students
+service - fetch all students data
+
+
+API and Webservice
+
+Angular Forms:
+i)Forms helps to collect data from the end user.
+ii)Forms can be simple to very complex.
+iii)The Forms contains a large number of input fields, a variety
+of input fields including text boxes,Number, email, password, check boxes, radio buttons, dropdown etc.
+
+ a)Template driven form. - small and simple forms.
+  i)The form is set up using ngForm directive
+  ii)Controls are setup using ngModel.
+  iii)The validations are configured in the template via directives.
+
+
+
+ b)Reactive form/Model driven form. - Complex and large forms.
+
+ Building blocks:
+
+ i)Form Control: A form control represents a single input field in an angular form.
+
+First Name:<input type="text" name="firstName" formControl>
+
+
+
+ ii)Form Group: Form group is a collection of form controls.
+
+ city:<input type="text" name="city">
+ Street:<input type="text" name="street">
+ PinCode: <input type="text" name="pincode">
+
+ reactiveForm=new FormGroup(
+    firstName:new FormControl(),
+    lastName:new FormControl(),
+    email:new FormControl()
+ );
+ 
+
+ iii)Form Array: It is an array of form controls. 
+ It is similar to FormGroup except for one difference.
+ In FormGroup each formcontrol is a preperty with the control name as the key. In FormArray each formControl is an element.
+
+
+contactForm=new FormGroup(
+    {
+        name:new FormControl(''),
+        cities:new FormsArray(
+            new FormControl('Mumbai'),
+            new FormControl('Delhi')
+        )
+    }
+);
+
+FormsModule
+
+Form Validation:
+i) name.errors - returns list of errors 
+ii) name.dirty - true if the value of one of the child control has changed
+iii)name.touched - true if one of the child control is touched - focus/blur
+iv)name.valid - true if all the child controls passed the validation  
+
+REst API
+Webservices
+
+REST API Calling:
+
+Consumer-Producer
+
+Client-Server Architechture - HTTP Protocol
+
+HTTP Request      ---------> Other App
+HTTP Response    <----------
+
+
+i)Success Response - Three digits number
+ 
+  200 / 201 - Success response
+  303/ 303  - Redirection error  www.abc.com/data  www.test.com/data 
+  404/403   - Error Reponse (Client Side error)
+  503/505   - Error Response (Server side error) 
+
+
+Android OS/IOS    -------->     Weather App(System) - Python
+
+Desktop/Laptop   ---------->    Bank Server
+
+Cricket Score    ----------->   Espn Cricket info
+
+
+Java App         ----------->   OTP Service(Asp.net/c# )
+
+Common Data Exchange Format - XML / JSON
+
+JavaScript Object - Javascript Object Notation
+
+MVC - design patter
+
+Model - Classes
+View - UI, Template
+Controller - Class
+
+Spring Boot MVC
+
+Frontend Designer UX/UI: HTML5, Css, Javascript, Typescript, BootStrap, Angular(API calling)
+Backend Developer: Java, Spring, Hibernate, Spring Boot(REST)
+
+MERN/MARN
+
+Types of API/ Webservices:
+
+i)REST API - XML, JSON, String, Text, Binary etc
+ii)SOAP Webservice(Simple Object access protocol) - XML - traditional legacy API style
+iii)GraphQL 
+iv)XML - RPC
+v)WebSocket - Chat App
+
+
+
+ng g c userlist
+
+ng g s user
+
+rest api testing tool /rest client tool- Postman
+
+
+Http Status Codes:
+101,102 - INFORMATION
+200/201 -  SUCCESS
+301/302/303 - REDIRECTION
+404,400 -  CLIENT SIDE ERROR
+503, 500 - SERVER SIDE ERROR
+
+resources: A resource denotes anything that that is manged through rest api calling.
+A resource can be a record, a file, an image, text data etc. 
+
+http://localhost/test/employee/345
+
+http Methods:
+i)GET - fetch/get a single or collection of resources
+ii)POST - Create a new resource
+iii)PUT - Update a resource completely
+iv)PATCH - Upate a resource partially
+v)Delete - delete a resource or a collection of recources
+
+OPTION, LINK etc
+
+HttpClientModule - HttpClient
+
+
+Reactive Programming:
+
+observable:(Producer)
+It is a function that coverts the oridary strem of data into an observable stream of data.
+An observable stream emits the value from the stream asynchronously.
+
+Observer: (Subscriber)
+The observer on its own is only useful if someone consumes the value emitted by the observable.
+
+Thunder Client- Rest api test tool
+
+1)Visual Studio
+2)Eclipse
+3)Postman
+4)Mysql Sever
+
+
+i)JDK(Java Development Kit) download, install and configure.
+ii)Eclipse IDE
+
+root component file
+
+login,c,b,a
+
+
+
+
+
+
+
+
+

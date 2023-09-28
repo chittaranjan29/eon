@@ -1,0 +1,146 @@
+Element
+An HTML element is an individual component of an HTML file.
+An element is composed of three parts. These are 
+
+i)Start Tag
+ii)Content
+iii)End Tag
+
+<tag attribute_name="attribute_value">Content</tag>
+<h2 style="color: coral;">Settings editor alt text improvements</h2>
+
+Formatting:
+It is process of changing text for better look and feel.
+HTML allows us to format the text without using CSS.
+
+<b>, 
+<strong></strong>
+<i></i>
+<em></em>
+<mark></mark>
+<u></u>
+<sup></sup>
+<sub></sub>
+<small></small>
+
+
+Element Types:
+i)Block : Gets displayed in a new line. ex- H1,Div etc.
+ii)Inline: Gets displayed in the same line.ex - span, u, mark etc.
+
+Anchor Tag:
+The HTML abnchor tag defines a hyperlink that links one page to another page.
+It can create links to other pages also(other server).
+
+<a href="/test.html">Content</a>
+
+Lists:
+List helps to group similar types of elements.
+
+i)Order List
+ii)Unordered Lists
+iii)Defination List
+
+Form:
+An HTML form is a section of the document which contains controls such as text fields, password fields, checkboxed, radio button, submit button,upload button menus etc. 
+
+An HTML form facilitates  the user to enter data that is to be send to the server for processing.
+
+Validation:
+Checking the client data is valid ot not.
+
+-129
+abc@
+
+i)Client Side validation - frontend
+ii)Server side validation - Backend
+
+Table:
+i)Cell spacing
+ii)Cell padding
+iii)Rowspan
+iv)Colspan
+
+Regular Expression:
+Iframe:
+An HTML iframe tag is used to display a web page within a web page.
+
+<iframe src=""></iframe>
+
+File Path:
+An HTML file path is used to describe the location of a file in a website folder.
+We can include any external resource to our HTML page with the help of file paths such as images, videos, pdfs, css file, javascript file etc.
+
+i)Absolute Path: It specifies full URL address.
+
+ex: C:\html\flower.jpg
+
+ii)Relative Path: It specifies file realted to the localtion of the current file.
+
+ex: flower.jpg 
+    /images/flower.jpg
+
+    https://www.abc.com/images/flower.jpg
+    https://contentgrid.homedepot-static.com/hdus/en_US/DTCCOMNEW/Articles/discover-the-secret-language-of-flowers-2022-hero.jpeg
+
+
+
+    <img src="flower.jpg"> - It indicates that flower.jpg is present in the same folder as the current document.
+
+    <img src="images/flower.jpg"> - It indicates that flower.jpg is located in the images folder in the current folder.
+
+    <img src="/images/flower.jpg"> - It indicates that flower.jpg is located in the images folder at the root folder. 
+
+    <img src="../flower.jpg"> - It indicates that flower.jpg is located in the folder one level up from the current folder.
+
+    CSS Types:
+    i)Inline css - style attribute of element
+    ii)Internal css - <stlye></style>
+    iii)External css - include style.css
+
+ Inline css has higher preference than  internal or external css
+ External css has higher preference than internal css
+
+
+ i)Register with fontawesome
+ ii)Get the JS library CDN link
+ iii)Paste the CDN in your html head
+ iv)Add icon in the html page
+
+Bootstrap 5:
+ HTML + CSS + Javascript(Vanila)
+
+Bootstrap 4:
+ HTML + CSS + Jquery
+
+Ways to add Bootstrap:
+i)Using CDN links.
+ii)Using bootstrap files. 
+
+
+Container: Main div which contains all the other elements of the webpage.
+.container : Provides a responsive fixed width container.
+.container-fluid: Provies a full width container.
+
+Jumbotron: 
+card
+list groups
+buttons
+alert 
+image
+Modals:
+
+popover 
+Tooltips:
+Carousel
+Dropdown
+Collapse
+Angular
+
+Node
+npm - Node Package Manager
+typescript
+
+Javascript -> Typescript -> Angular
+
+ng --version

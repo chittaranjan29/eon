@@ -1,0 +1,65 @@
+<p *ngIf="status">This is a paragraph1</p>
+<p *ngIf="status==true">This is a paragraph1</p>
+<p *ngIf="status==false">This is a paragraph2</p>
+
+<div *ngIf="a>=100"> 
+    This is a div element
+</div>
+
+
+<p *ngIf="status; else myblock">
+    This is if paragraph  
+</p>
+
+<ng-template #myblock>
+      <p>This is else paragraph</p>  
+</ng-template>
+
+
+<p *ngIf="a>=50;then myblock1 else myblock2">
+
+</p>
+
+<ng-template #myblock1>
+      <p>This is myblock1</p> 
+       
+</ng-template>
+
+<ng-template #myblock2>
+    <p>This is myblock2</p>  
+</ng-template>
+
+
+<ul *ngFor="let c of colors">
+    <li>{{c}}</li>
+</ul>
+
+<div *ngFor="let user of users" >
+    <p>{{user.name}} --- {{user.age}} </p>
+</div>
+
+
+<div [ngSwitch]="switchvar">
+    <p *ngSwitchCase="1">Sunday</p>
+    <p *ngSwitchCase="2">Monday</p>
+    <p *ngSwitchCase="3">Tuesday</p>
+    <p *ngSwitchCase="4">Wednesday</p>
+    <p *ngSwitchCase="5">Thursday</p>
+    <p *ngSwitchCase="6">Friday</p>
+    <p *ngSwitchCase="7">Saturday</p>
+    <p *ngSwitchDefault>Wrong Choice!!</p>
+</div>
+
+
+<p ngClass="primary big">
+    paragraph 1
+</p>
+
+<p ngClass="secondary small">
+    paragraph 2
+</p>
+
+
+<div [ngStyle]="{'background-color':bgcolor, 'color':color, 'font-size':font}">
+    This is a div
+</div>

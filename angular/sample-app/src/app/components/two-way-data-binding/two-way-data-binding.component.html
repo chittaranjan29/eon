@@ -1,0 +1,13 @@
+
+<input type="text" name="value" [(ngModel)]="a">
+<p>you entered {{a}}</p>
+<button (click)="clearValue()">Clear</button>
+
+<br>
+<input (input)="processInput($event)">
+<p>You have entered {{value}}</p>
+
+
+<br>
+<input #el (input)="handleInput(el)">
+<p>You have entered {{value1}}</p>

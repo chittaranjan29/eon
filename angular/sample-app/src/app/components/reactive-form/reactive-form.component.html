@@ -1,0 +1,19 @@
+<form [formGroup]="sampleForm" (ngSubmit)="processData()">
+
+    Name:<input type="text" formControlName="name" required >
+    <span style="color:red;" *ngIf="sampleForm.get('name')?.invalid && (sampleForm.get('name')?.touched || sampleForm.get('name')?.dirty)">
+        name is invalid
+    </span>
+
+    <br>
+    Email:<input  type="email" formControlName="email" required>
+    <span  style="color:red;"   *ngIf="sampleForm.get('email')?.invalid && (sampleForm.get('email')?.touched || sampleForm.get('name')?.dirty)" >
+        Email is invalid
+    </span>
+    <br>
+    Age:<input  type="number" formControlName="age" required><br>
+    <span style="color:red" *ngIf="sampleForm.get('age')?.invalid && (sampleForm.get('age')?.touched || sampleForm.get('name')?.dirty)">
+        Age is invalid
+    </span>
+    <button type="submit" [disabled]="sampleForm.invalid">Submit</button>
+</form>
