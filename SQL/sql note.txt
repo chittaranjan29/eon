@@ -1,0 +1,74 @@
+MySQL Server 8 Community Edition
+
+MySQL:
+i)Using Mysql Command Line Tool(CUI)
+ii)Using Mysql Workbench(GUI)
+
+Account :
+i)root (password - root)
+ii)username 
+
+DBMS:DBMS stands for Database Management System. It is a software system or technology
+used to manage data from a database.
+Database is a collection of interrelated data which is used to retrieve, insert, update and delete data.
+
+RDBMS:Relational Database Management System. Data stored and managed in a Relational database using tables which is divided into rows and columns. 
+
+Advantages:
+i)Reliability
+ii)Data Sharing	
+iii)Easy Maintanance
+iv)Backup 
+v)Control Redundancy
+
+
+Types of database:
+i)Network database
+ii)Hierarchical database
+iii)Relational database
+iv)Object Oriented database
+v)Distributed database
+vi)NoSql database
+vii)Cloud database
+
+
+Mysql, Oracle, MS Server, Postgres etc - Relational database
+MYSQL Database: Mysql - SunMicrosystem acquired by Orcle
+SQL: Structured Query Language. All the Relational databases follow a common standard language called SQL(ANSI commitee).
+
+Oracle Server, Mysql, Ms server, PostGreas, SQLLite etc. - follows SQL
+MYSQL and SQL.
+Write commands or queries
+
+
+Student
+id         name        roll      city       phone
+
+1         Raman         1       Mumbai      9273773838 
+
+Mysql Contraints(rules):
+applied on the column/field value in the table.
+
+i)Not null
+ii)default
+iii)check
+iv)primary key
+v)unique
+vi)Foreign key
+vii)Auto_increment
+viii)index - data retreve
+
+Junit
+Maven
+Design Patterns
+Dev ops
+Git commands
+
+
+
+
+
+
+
+
+
